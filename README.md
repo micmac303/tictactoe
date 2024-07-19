@@ -34,9 +34,11 @@ The ```Board``` class contains a two-dimensional array of ```Optional<Player>```
 
 The method returns an Optional<Player> object, which is empty if no player has won, or contains the winning player.
 
+## Technologies
+The application is implemented in Java, using Maven as the build tool.
+
 I have opted to use JUnit 5 for testing and AssertJ for assertions.
 
-The application is implemented in Java, using Maven as the build tool.
 ## Build the Project
 ```bash
 mvn clean install
