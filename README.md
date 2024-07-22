@@ -40,6 +40,10 @@ I added the ```junit-jupiter-params``` dependency to the pom.xml file to allow p
 As a result of writing the tests and implementing the behaviour required to support them, I decided that the approach was going beyond the *'simplest thing possible that solves the problem'* E.g. the methods ```placePlayer(...)``` and ```player(...)``` are not specified as the requirements only state that a board is to be passed to the function, not that the board has any functionality itself.
 These will be removed in the next merge request. Adhering to YAGNI and KISS principles. I will still merge this branch as it serves as a record of iterative development.
 
+### TTT-03-Refactor-For-Simplicity
+The next step is to refactor the code to remove the unnecessary methods and classes.
+
+
 
 ## Technologies
 The application is implemented in Java, using Maven as the build tool.
