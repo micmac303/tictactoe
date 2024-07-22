@@ -6,6 +6,6 @@ public class TicTacToe {
 
     public static Optional<Player> winningPlayer(Board board) {
 
-        return Optional.empty();
+        return board.winningPlayer();
     }
 }

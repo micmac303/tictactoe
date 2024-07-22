@@ -34,6 +34,13 @@ The ```Board``` class contains a two-dimensional array of ```Optional<Player>```
 
 The method returns an Optional<Player> object, which is empty if no player has won, or contains the winning player.
 
+### TTT-02-TDD-For-Winners
+The next step is to implement the function to determine the winner.
+I added the ```junit-jupiter-params``` dependency to the pom.xml file to allow parameterized tests.
+As a result of writing the tests and implementing the behaviour required to support them, I decided that the approach was going beyond the *'simplest thing possible that solves the problem'* E.g. the methods ```placePlayer(...)``` and ```player(...)``` are not specified as the requirements only state that a board is to be passed to the function, not that the board has any functionality itself.
+These will be removed in the next merge request. Adhering to YAGNI and KISS principles. I will still merge this branch as it serves as a record of iterative development.
+
+
 ## Technologies
 The application is implemented in Java, using Maven as the build tool.
 
