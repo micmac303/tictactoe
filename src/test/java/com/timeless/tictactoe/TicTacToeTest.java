@@ -20,35 +20,30 @@ class TicTacToeTest {
 
     private static Stream<Arguments> provideBoards() {
         return Stream.of(
-                // Empty board
                 Arguments.of(List.of(
                         '-', '-', '-',
                         '-', '-', '-',
                         '-', '-', '-'
                 ), '-'),
 
-                // Horizontal win for X
                 Arguments.of(List.of(
                         'X', 'X', 'X',
                         'O', 'O', '-',
                         '-', '-', '-'
                 ), 'X'),
 
-                // Vertical win for O
                 Arguments.of(List.of(
                         'X', 'O', 'X',
                         'X', 'O', '-',
                         '-', 'O', 'X'
                 ), 'O'),
 
-                // Diagonal win for X
                 Arguments.of(List.of(
                         'X', 'O', 'O',
                         '-', 'X', '-',
                         'O', '-', 'X'
                 ), 'X'),
 
-                // No winner
                 Arguments.of(List.of(
                         'X', 'O', 'X',
                         'X', 'O', 'O',
@@ -85,7 +80,6 @@ class TicTacToeTest {
 
     @Test
     void testValidBoardCounts() {
-        // Valid boards
         assertDoesNotThrow(() -> TicTacToe.winner(List.of(
                 'X', 'O', 'X',
                 'O', 'X', '-',
@@ -105,7 +99,6 @@ class TicTacToeTest {
 
     @Test
     void testInvalidBoardCounts() {
-        // Invalid boards
         assertThrows(IllegalArgumentException.class, () ->
                 TicTacToe.winner(List.of(
                         'X', 'X', 'X',
