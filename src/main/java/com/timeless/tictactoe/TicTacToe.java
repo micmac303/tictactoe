@@ -15,24 +15,21 @@ public class TicTacToe {
             throw new IllegalArgumentException("Invalid board");
         }
 
-        long crossCount = board.stream().filter(c -> c == 'X').count();
-        long noughtCount = board.stream().filter(c -> c == 'O').count();
+        var crossCount = board.stream().filter(c -> c == 'X').count();
+        var noughtCount = board.stream().filter(c -> c == 'O').count();
 
-        // Check if the board is valid based on the number of Xs and Os
-        long difference = Math.abs(crossCount - noughtCount);
+        var difference = Math.abs(crossCount - noughtCount);
         if (difference > 1) {
             throw new IllegalArgumentException("Invalid board: too many Xs or Os");
         }
 
-        // Check if the number of Xs and Os is less than 5
         if (crossCount + noughtCount < 5) {
             return '-';
         }
 
-        boolean xWins = hasWinner(board, 'X');
-        boolean oWins = hasWinner(board, 'O');
+        var xWins = hasWinner(board, 'X');
+        var oWins = hasWinner(board, 'O');
 
-        // Check for multiple winners
         if (xWins && oWins) {
             throw new IllegalArgumentException("Invalid board: multiple winners");
         }
